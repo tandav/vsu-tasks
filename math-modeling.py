@@ -3,18 +3,16 @@ import numpy as np
 
 omega = 1
 k = 1
+h = 0.1
 
 def f1(y, z):
-
     return z
 
 def f2(y, z):
-
     return -omega * np.sin(y) - k*z
 
 
 def step(ang_prev, ang_vel_prev):
-  
     k1 = h * f1(ang_prev, ang_vel_prev)
     l1 = h * f2(ang_prev, ang_vel_prev)
     
@@ -32,19 +30,11 @@ def step(ang_prev, ang_vel_prev):
 
     return ang, ang_vel 
 
-
-ang0 = 0
-ang_vel0 = 8
-
-h = 0.1
-
-X = [ang0]
-Y = [ang_vel0]
+X = [0]
+Y = [8]
 
 for i in range(1, 200):
-    
     x, y = step(X[-1], Y[-1])
-
     X.append(x)
     Y.append(y)
 
