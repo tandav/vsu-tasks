@@ -1,2 +1,2 @@
 # vsu-tasks
-programs from my university 🏫📖
+programs for my university 🏫📖
