@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
-om = 1
+omega = 1
 k = 1
 
 def f1(y, z):
@@ -10,7 +10,7 @@ def f1(y, z):
 
 def f2(y, z):
 
-    return -om * np.sin(y) - k*z
+    return -omega * np.sin(y) - k*z
 
 
 def step(ang_prev, ang_vel_prev):
@@ -51,5 +51,3 @@ for i in range(1, 200):
 plt.plot(X, Y)
 plt.grid(True)
 plt.show()
-
-
