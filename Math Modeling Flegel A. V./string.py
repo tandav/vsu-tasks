@@ -56,7 +56,7 @@ line, = ax.plot(X, U_prev)
 
 
 
-def animate(frame_number):
+def update_frame(frame_number):
     global U_prev, U_pprev
     U_curr = u_curr(U_prev, U_pprev)
     line.set_ydata(U_curr)  # update the data
@@ -69,6 +69,6 @@ def init():
     line.set_ydata(U_prev)
     return line,
 
-ani = animation.FuncAnimation(fig, animate, init_func=init, interval=k*1000, blit=True)
+ani = animation.FuncAnimation(fig, update_frame, init_func=init, interval=k*1000, blit=True)
 ax.set_ylim([-2,2])
 plt.show()
