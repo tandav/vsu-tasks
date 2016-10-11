@@ -18,25 +18,60 @@ import numpy as np
 # or on github (pics, .md, etc)
 
 
-l = 3. # length of the string
-n = 40 # number of length-chunks
-# h = 0.1
-h = l/n # string step
-a = 3. # a^2 = N/ro some sort of tension coefficient
+l = 3 # length of the string
+n = 40 # number of string-length-chunks
+h = l / n # string step
+a = 3 # a^2 = N/ro some sort of tension coefficient
 b = 100 # time in seconds
 m = 20000 # number of time-chunks
 k = b / m # chunk of time in seconds
 r = a * k / h
+N = 20 # number of harmonics in Fourier method
+pl = np.pi / l
+
+def initial_state(x):
+    if x == 0 or x == l:
+        return 0
+    return np.cos(- (x - 3) ** 2)
+
+def initial_speed(x):
+    return 0
+
 
 def initial_state(x):
     if x == 0 or x == l: return 0
     return np.cos(- (x - 3) ** 2)
 
-def InitSpeed(x):
+def initial_speed(x):
     return 0
 
+def AFunc(x, n):
+    return initial_state(x) * np.sin(pl * N * x)
 
+def BFunc(x, n):
+    return initial_speed(x) * np.sin(pl * N * x)
 
+def A_Integeral(n):
+    sum41 = 0
+    for i in range(n):
+        sum41 += AFunc(i * h, N) * h
+    return sum41
+
+def B_Integeral(n):
+    sum41 = 0
+    for i in range(n):
+        sum41 += BFunc(i * h, N) * h
+    return sum41
+
+def A(n): # try change n to z/p/s/v/whatever
+    return  2 / l * A_Integeral(n)
+
+def B(n): # try change n to z/p/s/v/whatever
+    return 2 / (np.pi * N * a) * B_Integeral(n)
+
+def U(x, t):
+    ser = [(A(i) * np.cos(pl * i * a * t) + B(i) * np.sin(pl * i * a * t)) * np.sin(pl * i * x) for i in range(1, N)]
+    return sum(ser)
 
 
 
@@ -56,14 +91,22 @@ X = np.linspace(0, l, n)
 U_pprev = [initial_state(s) for s in X]
 U_prev = U_pprev # TODO add += speed
 
-symbolic, = ax.plot(X, np.sin(X),'k--')
+# symbolic, = ax.plot(X, np.sin(X),'k--')
+symbolic, = ax.plot(X, U_pprev, 'k')
 numeric, = ax.plot(X, U_prev)
 
 
 
+t = 0
 
 def update_frame(frame_number):
-    global U_prev, U_pprev
+    global t, U_prev, U_pprev
+
+    symbolic.set_ydata(U(X, t))  # update the data
+    t += k # mb trouble is here
+
+
+
     U_curr = u_curr(U_prev, U_pprev)
     numeric.set_ydata(U_curr)  # update the data
     U_pprev = U_prev
@@ -71,9 +114,11 @@ def update_frame(frame_number):
     return symbolic, numeric
 
 def init():
+    symbolic.set_ydata(U_prev)
     numeric.set_ydata(U_prev)
     return symbolic, numeric
 
 ani = animation.FuncAnimation(fig, update_frame, init_func=init, interval=k*1000, blit=True)
 ax.set_ylim([-2,2])
+plt.grid(True)
 plt.show()
