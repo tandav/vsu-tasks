@@ -7,20 +7,23 @@ import matplotlib.pyplot as plt
 import numpy as np
 import matplotlib.animation as animation
 
-# mb add some ascii style schematic
-# solution outline.
+# TODO
+# 1. speed
+# 2. comment all for people
+# 3. mb add some ascii style schematic
+# solution, outline.
 # Dlya naglyadnosti
 # here in comments
 # or on github (pics, .md, etc)
 
 
 l = 3. # length of the string
-n = 40 # number of length chunks
+n = 40 # number of length-chunks
 # h = 0.1
 h = l/n # string step
-a = 3. # a^2 = N/ro - sorta tension coefficient
-b = 100 # seconds
-m = 20000 # number of time chunks
+a = 3. # a^2 = N/ro some sort of tension coefficient
+b = 100 # time in seconds
+m = 20000 # number of time-chunks
 k = b / m # chunk of time in seconds
 r = a * k / h
 
@@ -44,7 +47,7 @@ def u_curr(U_prev, U_pprev):
 
 
 
-# Draw
+# Drawing stuff
 fig, ax = plt.subplots()
 
 X = np.linspace(0, l, n)
@@ -52,22 +55,23 @@ X = np.linspace(0, l, n)
 U_pprev = [initial_state(s) for s in X]
 U_prev = U_pprev # TODO add += speed
 
-line, = ax.plot(X, U_prev)
+symbolic, = ax.plot(X, np.sin(X),'k--')
+numeric, = ax.plot(X, U_prev)
+
 
 
 
 def update_frame(frame_number):
     global U_prev, U_pprev
     U_curr = u_curr(U_prev, U_pprev)
-    line.set_ydata(U_curr)  # update the data
+    numeric.set_ydata(U_curr)  # update the data
     U_pprev = U_prev
     U_prev = U_curr
-    # print(frame_number)
-    return line,
+    return symbolic, numeric
 
 def init():
-    line.set_ydata(U_prev)
-    return line,
+    numeric.set_ydata(U_prev)
+    return symbolic, numeric
 
 ani = animation.FuncAnimation(fig, update_frame, init_func=init, interval=k*1000, blit=True)
 ax.set_ylim([-2,2])
