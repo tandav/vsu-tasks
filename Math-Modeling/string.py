@@ -3,9 +3,10 @@ import matplotlib       #
 matplotlib.use('TKAgg') #
 #########################
 
+import matplotlib.animation as animation
 import matplotlib.pyplot as plt
 import numpy as np
-import matplotlib.animation as animation
+
 
 # TODO
 # 1. speed
