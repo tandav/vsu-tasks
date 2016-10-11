@@ -1,48 +1,55 @@
+import matplotlib
+matplotlib.use('TKAgg')
+
 import matplotlib.pyplot as plt
 import numpy as np
 import matplotlib.animation as animation
 
-N = 20
+N = 12
 a = 2
 l = 3
+
 pl = np.pi / l
-h = 0.01
+
+h = 0.05
+
 
 def InitPos(x):
-	if x == 0 or x == l: return 0
-	return np.exp(- (x - 2) ** 2)
+    if x == 0 or x == l: return 0
+    return np.cos(- (x - 3) ** 2)
 
 def InitSpeed(x):
-	return 0
+    return 0
 
 def AFunc(x, n):
-	return InitPos(x) * np.sin(pl * n * x)
+    return InitPos(x) * np.sin(pl * n * x)
 
 def BFunc(x, n):
-	return InitSpeed(x) * np.sin(pl * n * x)
+    return InitSpeed(x) * np.sin(pl * n * x)
 
 def AInteger(n):
-	sum41 = 0
-	for i in range(int(l / h)): sum41 += AFunc(i * h, n) * h
+    sum41 = 0
+    for i in range(int(l / h)): sum41 += AFunc(i * h, n) * h
 
-	return sum41
+    return sum41
 
 def BInteger(n):
-	sum41 = 0
-	for i in range(int(l / h)): sum41 += BFunc(i * h, n) * h
-	return sum41
+    sum41 = 0
+    for i in range(int(l / h)):
+        sum41 += BFunc(i * h, n) * h
+    return sum41
 
 def A(n):
-	return AInteger(n) * 2 / l
+    return AInteger(n) * 2 / l
 
 def B(n):
-	return (BInteger(n) * 2) / (np.pi * n * a)
+    return (BInteger(n) * 2) / (np.pi * n * a)
 
 def U(x, t):
-	ser = [(A(i) * np.cos(pl * i * a * t) + B(i) * np.sin(pl * i * a * t)) * np.sin(pl * i * x) for i in range(1, N)]
-	return sum(ser)
+    ser = [(A(i) * np.cos(pl * i * a * t) + B(i) * np.sin(pl * i * a * t)) * np.sin(pl * i * x) for i in range(1, N)]
+    return sum(ser)
 
-#draw
+
 fig, ax = plt.subplots()
 
 X = np.arange(0.0, l, h)
@@ -56,7 +63,6 @@ def init():
     line.set_ydata(np.ma.array(X, mask=True))
     return line,
 
-
 ani = animation.FuncAnimation(fig, animate, np.arange(1, 2000), init_func=init, interval=1, blit=True)
-ax.set_ylim([-1,1])
+ax.set_ylim([-2,2])
 plt.show()
