@@ -19,7 +19,7 @@ import numpy as np
 
 
 l = 3 # length of the string
-n = 50 # number of string-length-chunks
+n = 29 # number of string-length-chunks
 # n = 32 # number of string-length-chunks
 h = l / n # string step
 a = 3 # a^2 = N/ro some sort of tension coefficient
