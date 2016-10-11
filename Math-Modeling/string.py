@@ -19,20 +19,24 @@ import numpy as np
 
 
 l = 3 # length of the string
-n = 40 # number of string-length-chunks
+n = 50 # number of string-length-chunks
+# n = 32 # number of string-length-chunks
 h = l / n # string step
 a = 3 # a^2 = N/ro some sort of tension coefficient
-b = 100 # time in seconds
+b = 20 # time in seconds
 m = 20000 # number of time-chunks
 k = b / m # chunk of time in seconds
-r = a * k / h
-N = 20 # number of harmonics in Fourier method
+r = (a * k) / h
+# N = 10 # number of harmonics in Fourier method
+N = 10 # number of harmonics in Fourier method
 pl = np.pi / l
 
 def initial_state(x):
     if x == 0 or x == l:
         return 0
-    return np.cos(- (x - 3) ** 2)
+    # return np.cos(- (x - 3) ** 2)
+    # return x*np.sin(x)
+    return x**2
 
 def initial_speed(x):
     return 0
@@ -85,40 +89,34 @@ def u_curr(U_prev, U_pprev):
 
 # Drawing stuff
 fig, ax = plt.subplots()
-
 X = np.linspace(0, l, n)
-
 U_pprev = [initial_state(s) for s in X]
 U_prev = U_pprev # TODO add += speed
-
-# symbolic, = ax.plot(X, np.sin(X),'k--')
-symbolic, = ax.plot(X, U_pprev, 'k')
+symbolic, = ax.plot(X, U_prev, 'k')
 numeric, = ax.plot(X, U_prev)
 
 
 
-t = 0
-
+t = k
 def update_frame(frame_number):
     global t, U_prev, U_pprev
-
     symbolic.set_ydata(U(X, t))  # update the data
     t += k # mb trouble is here
-
-
 
     U_curr = u_curr(U_prev, U_pprev)
     numeric.set_ydata(U_curr)  # update the data
     U_pprev = U_prev
     U_prev = U_curr
+
     return symbolic, numeric
 
 def init():
-    symbolic.set_ydata(U_prev)
-    numeric.set_ydata(U_prev)
+    symbolic.set_ydata(U_pprev)
+    numeric.set_ydata(U_pprev)
     return symbolic, numeric
 
-ani = animation.FuncAnimation(fig, update_frame, init_func=init, interval=k*1000, blit=True)
+# ani = animation.FuncAnimation(fig, update_frame, init_func=init, interval=k*1000000, blit=True)
+ani = animation.FuncAnimation(fig, update_frame, init_func=init, interval=k*1, blit=True)
 ax.set_ylim([-2,2])
 plt.grid(True)
 plt.show()
