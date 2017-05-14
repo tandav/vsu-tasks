@@ -25,12 +25,12 @@ n = 128
 # ----------------------------------------------------------------------
 # Alice's random sequence:
 A  = "10010010010010100100101001001010010010100100101001001010010010100100101001001010010101010010101010100101010011001001100101000000"
-print("Alice's sequence:\n" + A + "\n")
+print("ALICE: my sequence:\n" + A + "\n")
 
 
 # Alice's basis / machine sequence / gates:
 AM = "HIIHIIIIIIIIHIIIHIIHIIHHIHIHIHIHIHIHIHHHHHIHIIIHIIIHIIIHIIIHIIHIIHIHHIHIHIHIHHIIHIIHHHHHHHHHHIIIIIIHHHIIIHIIHIIHIIIIIIHIIHIIIHHH"
-print("Alice's gates:\n" + AM + "\n")
+print("ALICE: my gates:\n" + AM + "\n")
 
 Am = ""
 for i in range(n):
@@ -39,11 +39,10 @@ for i in range(n):
 	if AM[i] == "I":
 		Am += I(A[i])
 
-print("Alice before sending:")
-print(Am)
+print("ALICE: after gates:\n" + Am + "\n")
 
 BM = "IIHHHHIHHHIHIHHHIIIIHIIIHHHIHIIHIHIHIHHHIIHIHIIIIHIIHIIHHIIHHIHIHIHHHIHHIHIHHIHHIHHIIIIIIIHHIIIHIHIIIIHIHIIHHHIIIHHHIIIHHHIIIHHH"
-print("Bob's gates:\n" + BM + "\n")
+print("BOB: my gates:\n" + BM + "\n")
 
 Bm = ""
 for i in range(n):
@@ -52,12 +51,16 @@ for i in range(n):
 	if BM[i] == "I":
 		Bm += I(Am[i])
 
+print("BOB: after gates:\n" + Bm + "\n")
+
 B = ""
 for b in Bm:
 	if b == "Q" or b == "q":
 		B += str(randint(0, 1))
 	else:
 		B += b
+
+print("BOB: after measurement:\n" + B + "\n")
 
 same_gates = [] # or same
 for i in range(n):
@@ -71,8 +74,8 @@ for i in same_gates[:len(same_gates) // 2]:
 	A_check += A[i]
 	B_check += B[i]
 
-print("Alice's test sequence:\n" + A_check + "\n")
-print("Bob's test sequence:\n" + B_check + "\n")
+print("ALICE: test sequence:\n" + A_check + "\n")
+print("BOB: test sequence:\n" + B_check + "\n")
 
 if A_check == B_check:
 	print("Test sequencies are the same. So key is:")
