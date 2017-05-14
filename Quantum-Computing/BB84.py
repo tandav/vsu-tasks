@@ -1,7 +1,8 @@
 # BB84 128 bit protocol
 
-# | q+ > = Q
-# | q- > = q
+print("| q+ > = Q")
+print("| q- > = q")
+print("")
 
 from random import randint
 def H(x):
