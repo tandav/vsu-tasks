@@ -66,32 +66,33 @@ print("ALICE: сгенерированные кубиты:\n" + Aq + "\n")
 
 
 # # X: Hacker in the middle
-# XM = "IIHIIHIHIHIIHIIIHIIIHIIHIHIIHIIHIIIHIHIIIHIHIHIHIIHIHHIHIHIHIHIHIHIHIIIHIIIHIIIHIIIIHIHHIHIIHIIHHHIIHHIIHIHIHIHHIHIHHIIHIIIHIIII"
-# print("X: мои гейты gates:\n" + XM + "\n")
-# Xm = ""
-# for i in range(n):
-# 	if XM[i] == "H":
-# 		Xm += H(Am[i])
-# 	if XM[i] == "I":
-# 		Xm += I(Am[i])
-# print("X: после гейтов:\n" + Xm + "\n")
+# X   = "0011101010010110"
+# print("X: моя последовательность b:\n" + X + "\n")
 
-# X = ""
-# for x in Xm:
-# 	if x == "Q" or x == "q":
-# 		X += str(randint(0, 1))
+# XO  = "pppPPPppPPpPPpPp"
+# print("X: мои операторы:\n" + XO + "\n")
+
+# Xq = ""
+# for i in range(n):
+# 	if XO[i] == "P":
+# 		Xq += P(Aq[i])
+# 	if XO[i] == "p":
+# 		Xq += p(Aq[i])
+# print("X: после действия операторов:\n" + Xq + "\n")
+
+# X_measure = ""
+# for q in Xq:
+# 	if q == "Q" or q == "q":
+# 		X_measure += str(randint(0, 1))
 # 	else:
-# 		X += x
-# print("X: после измерения:\n" + X + "\n")
+# 		X_measure += q
+# print("X: после измерения:\n" + X_measure + "\n")
 
-# Xm = ""
-# for i in range(n):
-# 	if XM[i] == "H":
-# 		Xm += H(X[i])
-# 	if XM[i] == "I":
-# 		Xm += I(X[i])
-# print("X: после повторного применения гейтов:\n" + Xm + "\n")
-# Am = Xm
+# Aq = Xq
+
+# # End Hacker
+
+
 
 B   = "1011001011001101"
 print("BOB: моя последовательность b:\n" + B + "\n")
@@ -99,22 +100,20 @@ print("BOB: моя последовательность b:\n" + B + "\n")
 BO  = "PpPpppPpPPppPPpP"
 print("BOB: мои операторы:\n" + BO + "\n")
 
-Bm = ""
+Bq = ""
 for i in range(n):
 	if BO[i] == "P":
-		Bm += P(Aq[i])
+		Bq += P(Aq[i])
 	if BO[i] == "p":
-		Bm += p(Aq[i])
-
-print("BOB: после действия операторов:\n" + Bm + "\n")
+		Bq += p(Aq[i])
+print("BOB: после действия операторов:\n" + Bq + "\n")
 
 B_measure = ""
-for b in Bm:
-	if b == "Q" or b == "q":
+for q in Bq:
+	if q == "Q" or q == "q":
 		B_measure += str(randint(0, 1))
 	else:
-		B_measure += b
-
+		B_measure += q
 print("BOB: после измерения:\n" + B_measure + "\n")
 
 same_gates = [] # or same
@@ -134,10 +133,11 @@ print("BOB: тестовая последовательность:\n" + B_check 
 
 if A_check == B_check:
 	print("Тестовые последовательности совпадают. Ключ:")
-	key = ""
-	for i in same_gates[len(same_gates) // 2:]:
-		key += A[i]
-	print(key)
+	print(A_check)
+	# key = ""
+	# for i in same_gates[len(same_gates) // 2:]:
+		# key += A[i]
+	# print(key)
 else:
 	print("Тестовые последовательности НЕ совпадают. Было подслушивание.")
 
