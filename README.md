@@ -1,9 +1,17 @@
-# VSU Tasks 🏛 📖 🎓
-## 4 academic year (2016 - 2017)
-### 1 semester
-1. [Мат. моделирование - Флегель Александр Валерьевич](Math-Modeling)
-2. [Комбинаторные алгоритмы - Родин Владимир Александрович](comb-algorithms)
-3. [Маркетинг - Елена Павлова](Marketing)
+# [VSU](https://www.vsu.ru/) Tasks 🏛 📖 🎓
+## Bachelor's Degree
+### 4 academic year (2016 - 2017)
+#### 1 semester
+- [Mathematical Modeling - Flegel Alexander Valerjevich](Math-Modeling)
+- [Combinatorics Algorithms - Rodin Vladimir Aleksandrovich](comb-algorithms)
+- [Marketing - Elena Pavlova](Marketing)
 
-### 2 semester
-1. [Квантовые вычисления - Запрягаев Сергей Александрович](Quantum-Computing)
+#### 2 semester
+- [Quantum Computations - Zapryagaev Sergey Aleksandrovich](Quantum-Computing)
+
+## Master Degree
+### 1 academic year (2017 - 2018)
+#### 1 semester
+- [Informational Security](infosec)
+- [Financial Math](financial-math)
+- [Systems Analisys](systems-analisys)
