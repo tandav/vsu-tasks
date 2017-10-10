@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cobweb Plot</title>
+</head>
+<body>
+<div style="display: flex; justify-content: center;">
+    <canvas 
+        width="700" 
+        height="700" 
+        id="canvas" 
+        style="background-color: #eaf2ff;">
+            
+    </canvas>
+ 
+</div>
+<br>
+<br>
+
+<label>r =</label>
+<output id="r_out">1</output>  
+<br>
+<label>x =</label>
+<output id="x_out">1</output> 
+
+<script type="text/javascript">
+canvas = document.getElementById("canvas");
+ctx = canvas.getContext("2d");
+let width = canvas.width;
+let height = canvas.height;
+
+let rect = canvas.getBoundingClientRect();
+
+
+document.onmousemove = handleMouseMove;
+function handleMouseMove(event) {
+    let x = -1 / width * (event.clientX - rect.left) + 1;
+    let r = -4 / height * (event.clientY - rect.top) + 4 ;
+    document.querySelector('#r_out').value = r;
+    document.querySelector('#x_out').value = 1 - x;
+    draw(x, r)
+}
+
+x0 = 0.1
+
+const logmap = (x, r) => {
+    return r * x * (1 - x);
+}
+
+const x2px = (x) => {
+    return width * (1 - x);
+}
+
+const y2px = (y) => {
+    return height * (1 - y);
+}
+
+const px2y = (px) => {
+    return height * (1 - y);
+}
+
+const draw_grid = () => {
+    ctx.lineWidth = 0.5;
+    ctx.strokeStyle = "#DFE7F3";
+
+    for (var i = 0; i < width; i += width / 10) {
+        ctx.beginPath();
+        ctx.moveTo(i, 0);
+        ctx.lineTo(i, width);
+        ctx.stroke();
+
+        ctx.beginPath();
+        ctx.moveTo(0, i);
+        ctx.lineTo(width, i);
+        ctx.stroke();
+    }
+}
+
+const draw = (x, r) => {
+    ctx.clearRect(0, 0, width, height);
+    draw_grid()
+    ctx.lineWidth = 2;
+    ctx.strokeStyle = "black";
+    // draw line y = x
+    ctx.beginPath();
+    ctx.moveTo(0, height);
+    ctx.lineTo(width, 0);
+    ctx.stroke();
+
+    // draw parabola
+    ctx.beginPath();
+    ctx.moveTo(0, height);
+    ctx.quadraticCurveTo(width / 2, height * (1 - r / 2), width, height);
+    ctx.stroke();
+
+    // draw red lines
+    ctx.lineWidth = 1;
+    ctx.strokeStyle = "red";
+
+    ctx.beginPath();
+    ctx.moveTo(x2px(x), y2px(0));
+    ctx.lineTo(x2px(x), y2px(logmap(x, r)));
+    ctx.stroke();
+
+    for (let i=0; i < 100; i++) {
+        x0 = x2px(x);
+        y0 = y2px(logmap(x, r));
+
+        x1 = y2px(1 - logmap(x, r));
+        y1 = y2px(logmap(x, r));
+        
+        x2 = y2px(1 - logmap(x, r));
+        y2 = y2px(logmap(logmap(x, r), r));
+    
+        ctx.beginPath();
+        ctx.moveTo(x0, y0);
+        ctx.lineTo(x1, y1);
+        ctx.stroke();        
+
+        ctx.beginPath();
+        ctx.moveTo(x1, y1);
+        ctx.lineTo(x2, y2);
+        ctx.stroke();  
+        
+        x = 1 - logmap(x, r)
+    }
+}
+
+draw() // initial draw
+</script>
+</body>
+</html>
