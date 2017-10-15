@@ -10,6 +10,8 @@
 - [Quantum Computations - Zapryagaev Sergey Aleksandrovich](Quantum-Computing)
 
 ## Master Degree
+- [My thesis at Voronezh State University](https://github.com/tandav/ultrasonic-stethoscope)
+
 ### 1 academic year (2017 - 2018)
 #### 1 semester
 - [Informational Security](infosec)
