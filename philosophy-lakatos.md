@@ -16,7 +16,7 @@ Volume I consists of an introduction and five papers. The introduction, Science 
 
 The entirety of this collection is worth reading and rereading very carefully. The first paper is THE paper, his major position paper. In this review I will go through it and the introduction in some detail. 
 
-##Introduction
+## Introduction
 The introduction raises the question: How do we tell science from psudoscience? It begins with a survey of proposed answers and the problems with those proposals. Thus, some philosophers have drawn the line by saying **a statement constitutes knowledge if sufficiently many people believe it sufficiently strongly.** It should be clear that this will not do for delimiting scientific knowledge. He then goes on to quote Hume: 
 
 >If we take in our hand any volume; of divinity, or school metaphysics, for instance; let us ask, does it contain any abstract reasoning concerning quantity or number? No. Does it contain any experimental reasoning concerning matter of fact and existence? No. Commit it then to the flames. For it can contain nothing but sophistry and illusion. [p2] 
