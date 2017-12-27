@@ -1,59 +1,64 @@
-# И. Лакатос - методология научно-исследовательских програм
+# Обзор методологии научно-исследовательских программ Имре Лакатоса
 - source: [The Methodology of Scientific Research Programmes by Richard Harter](http://answersinscience.org/methodology.htm)
 
 ---
- 
-A Review of The Methodology of Scientific Research Programmes, Imre Lakatos, Philosophical papers, volume I, edited by John Worrall and Gregory Currie, Cambridge University Press, 1995 printing, ISBN 0-521-28031-1, pbk. 
-Imre Lakatos was one of the major modern philosophers of science. His name and work is often placed in contrast with that of Popper, Kuhn, and Feyerabend. Volume I of the collected papers deals with philosophy of science; volume II contains collected papers on the philosophy of mathematics. 
 
-Volume I consists of an introduction and five papers. The introduction, Science and Psudoscience, was written in 1973 and was delivered as a radio address. The papers are: 
+Имре Лакатос был одним из крупнейших современных философов науки. Его имя и работа часто противопоставляются Попперу, Куну и Фейерабенду. Его том I сборника статей рассматривает философию науки; том II содержит сборник статей по философии математики.
 
-1. Falsification and the methodology of scientific research programmes 
-2. History of science and its rational reconstructions 
-3. Popper on demarcation and induction 
-4. Why did Copernicus's research programme supersede Ptolemy's 
-5. Newton's effect on scientific standards 
+Том I состоит из введения и пяти статей. Введение, наука и психология были написаны в 1973 году и были получены через радио-эфир. 
 
-The entirety of this collection is worth reading and rereading very carefully. The first paper is THE paper, his major position paper. In this review I will go through it and the introduction in some detail. 
+Статьи:
 
-## Introduction
-The introduction raises the question: How do we tell science from psudoscience? It begins with a survey of proposed answers and the problems with those proposals. Thus, some philosophers have drawn the line by saying **a statement constitutes knowledge if sufficiently many people believe it sufficiently strongly.** It should be clear that this will not do for delimiting scientific knowledge. He then goes on to quote Hume: 
+1. Фальсификация и методология научно-исследовательских программ
+2. История науки и ее рациональная реконструкция
+3. Поппер: демаркация и индукция
+4. Почему исследовательская программа Коперника вытеснила Птолемея
+5. Влияние Ньютона на научные стандарты
 
->If we take in our hand any volume; of divinity, or school metaphysics, for instance; let us ask, does it contain any abstract reasoning concerning quantity or number? No. Does it contain any experimental reasoning concerning matter of fact and existence? No. Commit it then to the flames. For it can contain nothing but sophistry and illusion. [p2] 
+Весь этот сборник стоит внимательного чтения и перечитывания. Первая статья отражает основную позицию Лакатоса. В этом обзоре рассмотриваются введение и первая статья.
 
-This sounds very well until one asks, what is the nature of this **experimental reasoning**. Lakatos continues: 
+## Введение
+Введение ставит вопрос: как мы отличаем о науку от псевдонауки? Оно начинается с обзора предлагаемых ответов и проблем с этими ответами. Некоторые философы провели эту черту, сказав **утверждение представляет собой знание, если достаточно много людей достаточно сильно верят в него** Должно быть ясно, что это не будет правильной границей для разграничения научных знаний. Затем Лакатос цитирует Юма:
 
-> But what is **experimental reasoning**? If we look at the vast seventeenth-century literature on witchcraft, it is full of reports of careful observations and sworn evidence - even of experiments. Glanvill, the house philosopher of the early Royal Society, regarded witchcraft as the paradigm of experimental reasoning. We have to define experimental reasoning before we start Humean book burning. 
+> Если мы возьмем в руки любой том богословия или схоластической метафизики, например; давайте спросим, ​​содержит ли оно какие-либо абстрактные рассуждения о количестве или числе? Нет. Есть ли в нем какие-либо экспериментальные рассуждения о материи и существовании? Нет. Сожгите его. Ибо он может содержать только софистику и заблуждения. [Р2]
 
-> In scientific reasoning, theories are confronted with facts; and one of the central conditions of scientific reasoning is that theories must be supported by facts. Now how exactly can facts support theory? [p2]
+Это звучит очень хорошо, пока не спросите, какова природа этого **экспериментального рассуждения**. Лакатос продолжает:
 
-An early answer, favored by Newton who believed himself to have done such, is that one proves theories by deducing them from facts. This is readily seen to be impossible; one cannot, in general, deduce general laws from a finite number of facts. Lakatos attributes this false belief in provability to the inheritance of attitudes taken over from theology where provability is in the cards because theology starts with a presupposition of certain knowledge. 
+> Но что такое **экспериментальное рассуждение**? Если мы посмотрим на обширную литературу о колдовстве семнадцатого века, она полна сообщений о тщательных наблюдениях и присяжных свидетельствах - даже о экспериментах. Глэнвилл, философ палаты раннего Королевского общества, рассматривал колдовство как парадигму экспериментальных рассуждений. Мы должны определить экспериментальные рассуждения, прежде чем мы начнем сжигание книги Юма.
 
-The presumption that provability was attainable was buttressed by the enormous success of Newtonian mechanics - scientists believed that Newton had deciphered God's ultimate laws. Then came Einstein and provability was recognized as a mirage, raising (reraising) the question: 
+> В научных рассуждениях теории сталкиваются с фактами; и одним из центральных условий научного рассуждения является то, что теории должны поддерживаться фактами. Но как именно факты могут поддерживать теорию? [Р2]
 
-> If all scientific theories are equally unprovable, what distinguishes scientific knowledge from ignorance, science from psudoscience? [p3] 
+Один из первых ответов, одобренный Ньютоном, заключается в том, что кто-то доказывает теории, выведя их из фактов. Это легко увидеть невозможным; вообще говоря, нельзя выводить общие законы из конечного числа фактов. Лакатос приписывает эту ложную веру в доказуемость тому, что люди следуют идеям, взятых из богословия, потому что богословие начинается с предположения определенного знания.
 
-One twentieth century answer was **inductive logic** wherein theories were to be rated by their mathematical probability of satisfying the available total evidence. This sounds plausible and has the attractive feature of providing a measurement of quality. Popper, however, argued that the mathematical probability of any theory whatsoever, regardless of the amount of evidence, is zero. Popper in turn proposed the falsification criterion: 
+Предположение того, что доказуемость была достижимой, была подкреплена огромным успехом ньютоновской механики - ученые полагали, что Ньютон расшифровал окончательные законы Бога. Затем пришел Эйнштейн и доказуемость была признана миражем, вновь поднимая вопрос:
 
-A theory is **scientific** if one is prepared to specify in advance a crucial experiment (or observation) which can falsify it, and it is pseudoscientific if one refuses to specify such a **potential falsifer**. [p3] In other words, we cannot prove scientific theories but we can disprove them. A pseudoscientific theory is one which admits of no means of disproof. 
+> Если все научные теории одинаково недоказуемы, что отличает научное знание от невежества, науки от псевдонауки? [Р3]
 
-A major difficulty with Popper's criterion is that science doesn't work that way. Scientific theories have tenacity; theories are not jettisoned immediately because of facts that which contradict them. Sometimes rescue hypotheses are constructed; sometimes anomalies are simply ignored or are set aside to be considered later. Quite often crucial falsifying experiments are only seen to be such well after the fact. 
+Один ответ двадцатого века была **индуктивная логика**, где теории должны были оцениваться по их математической вероятности удовлетворения имеющихся общих доказательств. Это звучит правдоподобно и имеет привлекательную особенность обеспечения измерения качества. Поппер, однако, утверждал, что математическая вероятность любой теории, независимо от количества доказательств, равна нулю. Поппер, в свою очередь, предложил **критерий фальсификации:**
 
-If Popper has been falsified, what then? Lakatos says that Kuhn in turn suggests that **a scientific revolution is just an irrational change in commitment, that it is a religious conversion**. This, in my opinion, is not at all a proper interpretation of Kuhn's theses although Kuhn is often read that way by post-modernists. 
+Теория является **научной**, если кто-то готов заранее указать решающий эксперимент (или наблюдение), который может фальсифицировать его, и он псевдонаучен, если отказаться от определения такого **потенциального фальсификатора**. [p3] Другими словами, мы не можем доказать научные теории, но мы можем опровергнуть их. Псевдонаучная теория - это та, которая не допускает никаких опровержений.
 
-Lakatos proposes the a theory of research programmes. He remarks that research programmes are the unit of scientific achievement rather than isolated hypotheses. A research programme typically a hard core, a protective belt of auxiliary hypotheses, and a heuristic, i.e., problem solving machinery. Thus, in the Newtonian programme, the laws of motion and the universal law of gravitation are the hard core. Anomalies in the motion of planets are dealt with by considering factors that may affect the apparent motion, e.g., refraction of light or the existence of a hitherto unknown planet. The problem solving machinery is the vast body of classical mathematical physics. 
+Главная сложность с критерием Поппера заключается в том, что наука не работает именно так. Научные теории имеют упорство; теории не отбрасываются немедленно из-за фактов, которые противоречат им. Иногда строятся спасательные гипотезы; иногда аномалии просто игнорируются или отложены, чтобы их можно было рассмотреть позже. Довольно часто решающие эксперименты-опровержения наблюдаются только после этого факта.
 
-Research programmes, scientific or pseudoscientific, have, at any stage, both undigested anomalies and unsolved problems. **All theories, in this sense, are born refuted and die refuted.** Lakatos then makes a dubious move, to wit: 
+Если Поппер был фальсифицирован, что тогда? Лакатос говорит, что Кун в свою очередь предполагает, что **научная революция - это просто иррациональное изменение в приверженности, что это религиозное превращение**. Это, на мой взгляд, вовсе не является правильной интерпретацией тезисов Куна, хотя Куна часто читают таким образом постмодернисты.
 
-But how can one distinguish a scientific or progressive programme from a pseudoscientific or degenerating one? [p5] The move, here, is to identify **scientific and progressive** and **pseudoscientific and degenerating**. He goes on to nominate **predicting new facts** as a major criterion for distinguishing between progressive and degenerating research programmes: 
+Лакатос предлагает теорию исследовательских программ. Он отмечает, что исследовательские программы являются единицей научных достижений, а не изолированными гипотезами. Исследовательская программа, как правило, представляет собой **твердое ядро**, **защитный пояс** вспомогательных гипотез и **эвристику, т.е. механизм решения проблем**. 
 
-> Thus, in a progressive research programme, theory leads to the discovery of hitherto unknown novel facts. In degenerating programmes, however, theories are fabricated only in order to accommodate known facts. Has, for instance, Marxism ever predicted a stunning novel fact successively? Never. [p5]
+Таким образом, в ньютоновской программе законы движения и универсальный закон тяготения являются твердым ядром. Аномалии в движении планет рассматриваются с учетом факторов, которые могут повлиять на кажущееся движение, например, преломление света или существование доселе неизвестной планеты. Механизм решения проблем - обширная совокупность классической математической физики.
 
-He was doing so well, up to his rhetorical query about Marxism. He followed this with a list of failed predictions of Marxist theory. In point of fact, though, Marx made a number of novel predictions which panned out. Thus, Marxist theory predicted (and it was far from obvious at the time) the consolidation and merging of large firms and the increasingly convulsive cycle of booms and depressions - capitalism followed the predictions of Marxist theory up to the great depression. This is not to say that Marxist theory was correct (he was, after all, an economist) or that the Marxist research programme did not degenerate; in fact, it did because it fundamentally could not take into account the reaction of the industrial nations to economic crises. 
+Исследовательские программы, научные или псевдонаучные, на любой стадии имеют как непереваренные аномалии, так и нерешенные проблемы. **Все теории, в этом смысле, рождаются опровергнутыми и умирают опровергнуты.** Лакатос затем задает вопрос:
 
-Nor is it accurate to say that pseudosciences do not predict novel facts, even stunning natural facts. Velikovsky, for example, predicted that Venus would be hot and that Jupiter would be a radio source. For that matter, psychic hotline psychics have been known to make stunningly accurate predictions from time to time. 
+> Но как можно отличить научную или прогрессивную программу от псевдонаучной или вырождающейся? [p5]
 
-Lakatos, like many philosophers of science, tends to focus on physics, a focus that tends to be misleading. One of the striking features of physics as a science is the reduction of the domain of phenomena to be considered. This reduction is an enabler of the possibility of precise prediction. 
+Выявление **научных и прогрессивных** и **псевдонаучных и вырождающихся**. Он продолжает и предлагает: **прогноз новых фактов** в качестве основного критерия для разграничения прогрессивных и вырождающихся исследовательских программ.
+
+> Таким образом, в прогрессивной исследовательской программе теория ведет к открытию доселе неизвестных новых фактов. Однако в дегенеративных программах теории сфабрикованы только для того, чтобы учесть известные факты. Например, марксизм - когда-либо он предсказывал ошеломляющий новый факт? Никогда. [P5]
+
+Стоить заметить, что несмотря на то что Лакатос хорошо вел рассуждение, вплоть до его риторического вопроса о марксизме. Он последовал за этим списком неудачных предсказаний марксистской теории. В действительности, однако, Маркс опубликовал ряд новых предсказаний. Таким образом, марксистская теория предсказала (и в то время это было далеко не очевидно) консолидацию и слияние крупных фирм и все более судорожный цикл бумов и депрессий - капитализм следовал предсказаниям марксистской теории вплоть до великой депрессии. Это не значит, что марксистская теория была правильной (он был, в конце концов, экономистом) или что марксистская исследовательская программа не выродилась; на самом деле, это произошло потому, что в корне не могло принимать во внимание реакцию индустриальных стран на экономические кризисы.
+
+Точно также нельзя сказать, что лженауки не предсказывают новые факты, даже потрясающие природные факты. Например, Великовский предсказал, что Венера будет горячей и что Юпитер будет радиоисточником. Как бы то ни было, экстрасенсы психической горячей линии, как известно, время от времени делают потрясающе точные прогнозы.
+
+Лакатос, как и многие философы науки, стремится сосредоточиться на физике, фокус, который, как правило, вводит в заблуждение. Одной из поразительных особенностей физики как науки является сокращение области рассматриваемых явлений. Это сокращение является стимулом для возможности точного прогнозирования. 
 
 ## Falsification and the methodology of scientific research programmes
 This paper is the one that establishes the main force of Lakatos's argument. It begins with the observation that prior to the twentieth century and Einstein **knowledge meant proven knowledge - proven either by the power of the intellect or by the evidence of the senses.** in response to Einstein's results the notion that scientific knowledge is proven knowledge has pretty much been abandoned. 
@@ -158,9 +163,9 @@ In reviewing a major work such as this one looks not only at what is said but al
 
 One of the striking omissions is a theory of scientific truth. There are fragments of a theory; that is what the progression through the theories of knowledge is about. It is a curious progression; we move through: 
 
-> True
-> Not yet falsified 
-> Not currently admitted to be falsified
+> - True
+> - Not yet falsified 
+> - Not currently admitted to be falsified
 
 In what sense, then, does scientific knowledge have any truth content at all? In what sense, then, can it even be said to be knowledge? The answer, perhaps, lies in the notion of verisimilitude. Verisimilitude is, however, a notion with serious problems. Lakatos wrestles with the problem here and there, mostly in the footnotes, but comes to no resolution or even serious treatment. In practice discarded theories of scientific truth appear as **unproblematic background knowledge**. 
 
