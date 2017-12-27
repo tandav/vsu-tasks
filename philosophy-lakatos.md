@@ -142,41 +142,37 @@
 
 Лакатос считает, что решающие эксперименты - те, которые устанавливают одну программу над другой - редко вовремя признаются решающими. Более того, эксперименты, которые должны были быть решающими, часто бывают не такими. Существенная трудность заключается в том, что только после того, как конфликт был разрешен, можно понять, что означал эксперимент. В рамках каждой исследовательской программы предполагаемый решающий эксперимент интерпретируется по-разному.
 
-`+++ STOPPED HERE +++`
+Примечательно, что Лакатос принижает Куна и в не отзывается о нем благоприятно. В разделе решающих экспериментов он пишет:
 
-Примечательно, что Лакатос унижает Куна и в настоящее время представляет его правильно (или благоприятно). Таким образом, в разделе критических экспериментов мы имеем:
+> Никогда нельзя допускать, чтобы исследовательская программа становилась мировоззрением или какой-то научной строгостью, ставя себя как арбитр между объяснением и не объяснением, как математическая строгость ставит себя как арбитр между доказательством и не доказательством. К сожалению, это позиция, которую Кун стремится защищать: действительно, то, что он называет **нормальной наукой**, - это не что иное, как исследовательская программа, которая добилась монополии. Но, по сути, исследовательские программы достигают полной монополии только изредка, и только на относительно короткие периоды, несмотря на усилия некоторых Картезианцев, Ньютонианцев и Борян. ** История науки была и должна быть историей конкурирующих исследовательских программ (или, если хотите) **парадигм**), но она не была и не должна становиться последовательностью периодов нормальной науки: чем скорее начнется соревнование,тем лучше для прогресса. * **Теоретический плюрализм** лучше, чем **теоретический монизм**: по этому вопросу Поппер и Фейерабенд правы, а Кун ошибается. [стр. 68-69]
 
-It is notable that Lakatos disparages Kuhn and in nowise represents him correctly (or favorably). Thus in the section on crucial experiments we have: 
+Это не совсем правильно. **Нормальная наука** Куна - это очень **положительная эвристика** Лакатоса. Это работа, которая продолжается в контексте исследовательской программы, поскольку Лакатос неохотно признается в сноске [p91]. Кун не выступает за теоретический монизм. Нельзя приравнивать парадигмы и исследовательские программы, хотя они тесно связаны друг с другом. И Кун, и Лакатос совершают ту же ошибку от имени своих интеллектуальных детей, Куна за его парадигмы, Лакатоса за его исследовательские программы, который не может признать, что они приходят в разных размерах, масштабах и временной продолжительности. То есть, эффекты, обусловленные этими вариациями, не отражены в их обсуждениях.
 
-> One must never allow a research programme to become a weltanschauung, or a sort of scientific rigor, setting itself up as arbiter between explanation and non-explanation, as mathematical rigor sets itself up as arbiter between proof and non-proof. Unfortunately this is the position which Kuhn tends to advocate: indeed, what he calls **normal science** is nothing but a research program that has achieved monopoly. But, as a matter of fact, research programmes have achieved complete monopoly only rarely and then only for relatively short periods, in spite of the efforts of some Cartesians, Newtonians and Bohrians. *The history of science has been and ought to be a history of competing research programmes (or, if you wish, **paradigms**) but it has not been and must become a succession of periods of normal science: the sooner competition starts, the better for progress.* **Theoretical pluralism** is better than **theoretical monism**: on this point Popper and Feyerabend are right and Kuhn is wrong. [pp 68-69]
+В заключении Лакатос различает зрелую науку, состоящую из исследовательских программ и незрелой науки, которая состоит из **простого исправленного шаблона проб и ошибок**. Зрелая наука обладает **эвристической силой**.
 
-Now this is quite wrong. Kuhn's **normal science** is very much Lakatos's **positive heuristic**. It is the work that goes on within the context of a research programme as Lakatos grudgingly admits in a footnote [p91]. Kuhn does not advocate theoretical monism. One cannot equate paradigms and research programs although they are intimately related. Both Kuhn and Lakatos make the same mistake on behalf of their intellectual children, Kuhn for his paradigms, Lakatos for his research programs, which is to fail to recognize that they come in varied sizes, scope, and temporal duration. That is, effects due to these variations are not reflected in their discussions. 
+В работе есть немало примеров - тематические исследования - которые иллюстрируют его различные аргументы; они составляют большую часть текста. Это стоит внимательного прочтения. Раздел, Кун против Поппера, мог бы с пользой быть опущен.
 
-In the conclusion Lakatos distinguishes between mature science, consisting of research programmes, and immature science which consists of **a mere patched up pattern of trial and error**. Mature science has **heuristic power**. 
+## Замечания
+При рассмотрении такой крупной работы, как эта, мы смотрим не только на сказанное, но и то, что не сказано - какие темы, мысли и темы отсутствуют.
 
-The paper has quite a few examples - case studies - which illustrate his various arguments; they constitue much of the text. These are well worth reading carefully. The section, Kuhn vs Popper, might profitably have been omitted. 
+Одним из поразительных упущений является теория научной правды. Мы проходим через любопытную прогрессию:
 
-## Remarks in commentary
-In reviewing a major work such as this one looks not only at what is said but also what is not said - what themes, thoughts, and topics are absent. 
+> - Правда
+> - Еще не сфальсифицировано
+> - В настоящее время не допускается фальсификация
 
-One of the striking omissions is a theory of scientific truth. There are fragments of a theory; that is what the progression through the theories of knowledge is about. It is a curious progression; we move through: 
+В каком смысле тогда научное знание вообще имеет какое-либо содержание правды? Можно ли тогда сказать, что это знание? Ответ, возможно, заключается в понятии правдоподобия. Однако правдоподобие представляет собой понятие с серьезными проблемами. Лакатос борется с проблемой здесь и там, главным образом в сносках, но не приходит к решению или даже к серьезному обращению. На практике отброшенные теории научной истины проявляются как **беспроблемное фоновые знание**.
 
-> - True
-> - Not yet falsified 
-> - Not currently admitted to be falsified
+Второе упущение - это упущение всего, кроме астрономии и физики. Можно было бы спросить, применима ли его структура к чему-либо, кроме физики (как известно, тяжелая, зрелая наука). Возможно, это так; возможно, это не так; он не начинает рассматривать вопрос.
 
-In what sense, then, does scientific knowledge have any truth content at all? In what sense, then, can it even be said to be knowledge? The answer, perhaps, lies in the notion of verisimilitude. Verisimilitude is, however, a notion with serious problems. Lakatos wrestles with the problem here and there, mostly in the footnotes, but comes to no resolution or even serious treatment. In practice discarded theories of scientific truth appear as **unproblematic background knowledge**. 
+Третье упущение состоит в том, что вопрос, поднятый во введении, **В чем разница между наукой и лженаукой**, на самом деле никогда не находит ответа. Основная статья [написанная ранее] различает зрелую и незрелую науку и между прогрессивными и дегенеративными исследовательскими программами. Вступление [написанное позже] называет различные псевдонауки, например. Марксизм, но **разрушает** его как дегенеративную исследовательскую программу. Однако в **настоящей** науке дегенеративная исследовательская программа живет так долго, пока ничего не получилось.
 
-A second omission is the omission of everything except astronomy and physics. One might well ask whether his structure applies to anything except physics (notoriously considered the hard, mature science.) Perhaps it does; perhaps it does not; he does not begin to consider the question. 
+Изображения исследовательских программ и марш теорий довольно схематичны и не соответствуют реальной практике. Таким образом:
 
-A third omission is that the question raised in the introduction, **What is the difference between science and pseudoscience** is never actually answered. The main paper [written earlier] distinguishes between mature and immature science and between progressive and degenerating research programmes. The introduction [written later] names various pseudosciences, e.g. Marxism, but **demolishes** it as having a degenerate research programme. In **Real** science, however, a degenerate research programme lives on as long as nothing better has come along. 
+- В реальных исследованиях на переднем крае дисциплины редко существует **современная лучшая** теория; вместо этого существует множество конкурирующих теорий.
+- Исследовательские программы обычно умирают в результате социальных изменений.
+- Лакатос игнорирует взаимосвязь между теоретическими программами и экспериментальными программами и существенное напряжение, существующее там. У меня сложилось впечатление, что философы склонны давать привилегию теории над экспериментом.
 
-The depiction of research programmes and the march of theories is rather schematic and doesn't accord well with actual practice. Thus: 
+Мое впечатление, во-первых, заключается в том, что он занимается социологическим анализом того, как фактически работает научный процесс. Это не вся наука, и это не весь процесс.
 
-- In actual research at the forefront of a discipline there is seldom a **current best** theory; instead there is a plethora of competing theories. 
-- Research programs usually die as a result of social changes. 
-- Lakatos ignores the interrelationship between theory programmes and experimental programmes, and the essential tension that exists there. My impression is that philsophers tend to privelege theory over experiment.
-
-My impression, over all, is that he is engaged in a sociological analysis of how the process of science actually works (and doing a much better job of it than the **science studies** folks do, I might add.) It is not the entirety of science and it is not the entirety of the process. 
-
-He doesn't really come to terms, in my opinion, with why science works. This need not be counted as fault - it is not the question he was engaged in answering. 
+На мой взгляд, он действительно не согласен с тем, почему наука работает. Это не нужно считать ошибкой - это не вопрос, на который он отвечал.
