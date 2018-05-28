@@ -1,0 +1,56 @@
+\documentclass[a4paper, 12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{literat}
+\usepackage[T2A]{fontenc}
+\usepackage{verse}
+% \usepackage{geometry}
+\usepackage[left=3cm, right=3cm, top=2cm, bottom=2cm]{geometry}
+\usepackage[nottoc]{tocbibind}
+% \usepackage[style=ieee]{biblatex}
+\usepackage{biblatex}
+\addbibresource{5_references.bib}
+\usepackage{csquotes}
+\usepackage{graphicx}
+% \usepackage{setspace}
+
+\graphicspath{ {./images/} }
+\usepackage[export]{adjustbox}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}
+% \setlength\parindent{0pt}
+
+% \title{доклад на тему\\\textbf{\scshape\Huge{Достижения арабских математиков в алгебре}}}
+% \author{\Large{\scshapeАлександр Родионов}\\ФКН, МКН, 1к (магистратура)\\}
+
+
+\begin{document}
+
+% \maketitle
+
+\include{titlepage}
+
+% \newpage
+\tableofcontents
+
+\include{1_section}
+\include{2_section}
+\include{3_section}
+\include{4_section}
+% \include{5_section}
+
+% \newpage
+% \addcontentsline{toc}{section}{\protect\numberline{}Список использованных источников}%
+% \bibliographystyle{plain}
+% \bibliography{5_references}
+% \printbibliography
+\printbibliography[heading=bibintoc,title={Список литературы}]
+
+\nocite{*}
+\end{document}
