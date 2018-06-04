@@ -1,0 +1,83 @@
+\pdfmapfile{+literat.map}
+\documentclass[a4paper, 12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{literat}
+\usepackage[T2A]{fontenc}
+% \usepackage{geometry}
+\usepackage[left=1cm, right=2.5cm, top=1cm, bottom=1.5cm]{geometry}
+\usepackage{graphicx}
+% \usepackage{setspace}
+\usepackage{blindtext}
+\usepackage{multicol}
+\usepackage{amsmath}
+\graphicspath{ {./images/} }
+
+\DeclareMathOperator{\Haar}{H}
+\DeclareMathOperator{\iHaar}{iH}
+% \setlength{\columnsep}{1cm}
+% \usepackage[export]{adjustbox}
+% \setlength\parindent{0pt}
+
+\title{\large{Родионов Александр МКН 1к маг.}}
+\date{}
+% \author{\Large{\scshapeАлександр Родионов}\\ФКН, МКН, 1к (магистратура)\\}
+
+
+\begin{document}
+\maketitle
+\vspace{-2cm}
+
+% \twocolumn
+
+\begin{multicols}{2}
+
+\noindent\textbf{Задача.} Исследовать насколько сильно можно сжать сигнал с помощью вейвлет преобразования Хаара без существенных потерь качества. Последовательность действий: 
+
+\begin{enumerate}
+  \item исходный сигнал $f = \sin(x) + 0.15\sin(20x)$
+  \item преобразавание Хаара: $h = \Haar(f)$
+  \item Обнуление коеффициентов, абсолютное значение которых меньше определенного порога $T$: $$h_{i} = 0, \text{если }\mathopen|h_{i}|< T$$ Подсчет количества выброшенных коеффициентов $K$. Вычесление процента сжатия:  $compressions = \frac{K}{N} \times 100\%$
+  \item Обратное преобразавание Хаара: $$g = \iHaar(h)$$
+  \item Сравнение $f$ и $g$
+\end{enumerate}
+
+Сравнение сигналов будем определять тремя способами: 
+
+
+\begin{itemize}
+  \item Cравнение графиков $f$ и $g$
+  \item $RMSE = \sqrt{    \frac{1}{n} \sum_{i=1}^{n}(f_{i} - g_{i})^2}    $
+  \item $MAE = \frac{\sum_{i=1}^{n}|f_{i} - g_{i}|}{n}$
+\end{itemize}
+
+
+
+% \include{titlepage}
+
+% \newpage
+
+
+% \newpage
+% \addcontentsline{toc}{section}{\protect\numberline{}Список использованных источников}%
+% \bibliographystyle{plain}
+% \bibliography{5_references}
+% \printbibliography
+
+\end{multicols}
+
+\vspace{1cm}
+% \begin{figure}[h]
+\centering
+% \includegraphics[scale=1.5]{signals-0_1}
+% \includegraphics[scale=1.5]{signals-0_3}
+\includegraphics[width=18cm]{signals-0_1}
+\includegraphics[width=18cm]{signals-0_3}
+
+Вычислим также значения RMSE и MAE для всех возможных уровней компрессии 0...100\%:
+\vspace{2cm}
+\includegraphics[width=18cm]{rmse_mae}
+
+% \caption{Example of a parametric plot ($\sin (x), \cos(x), x$)}
+% \end{figure}
+\end{document}
