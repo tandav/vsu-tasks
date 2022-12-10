@@ -1,0 +1,14 @@
+enable
+conf t
+int g0/0.2
+encap dot1qenc	 2
+ip address 10.0.0.254  255.0.0.0
+int g0/0.3
+encap dot1q 3
+ip address 11.0.0.254  255.0.0.0
+
+
+
+на роуторе
+trunc-между свичами связь, тут 
+интерфейс подписывается

@@ -1,0 +1,18 @@
+create table TB_SUBJECT(
+  ID int
+    constraint CT_SUBJECT_PK_ID
+      primary key,
+  NAME varchar2(100)
+    constraint CT_SUBJECT_NN_FIO
+      not null,
+  COURSE int
+    constraint CT_SUBJECT_NN_COURSE
+      not null
+    constraint CT_SUBJECT_CH_COURSE
+      check(COURSE between 1 and 6),
+  TYPE_ID int
+    constraint CT_SUBJECT_FK_TYPE_ID
+      references TB_SUBJECT_TYPE(ID)
+  constraint CT_SUBJECT_UN_NAME_COURSE
+    unique(NAME, COURSE)
+);

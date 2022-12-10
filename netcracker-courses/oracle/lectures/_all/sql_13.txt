@@ -1,0 +1,17 @@
+-- триггер для "автоинкрементации" ID в таблице USERS
+create or replace trigger TR_SUBJECT_SET_ID
+  before insert on TB_SUBJECT for each row
+begin
+  if :new.ID is null then
+    select SQ_SUBJECT.nextval into :new.ID
+      from dual;
+  end if;
+end;
+
+
+
+insert into t(..) values(...)
+  return id into :id
+pstmt.registerParameter("id", Types.Integer);
+pstmt.execute();
+pstmt.getParameter(id);

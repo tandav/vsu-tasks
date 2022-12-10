@@ -1,0 +1,153 @@
+select *
+  from nls_session_parameters;
+alter session
+  set nls_date_format='DD.MM.YYYY HH24:MI:SS';
+
+select to_char(-123, '999990D00') as A,
+       to_char(1000123.456, '999990D00',
+               'nls_numeric_characters=''. ''') as B,
+       trim(to_char(1000123.456, '9999999990D00',
+            'nls_numeric_characters=''. ''')) as C,
+       to_char(1000123.456, 'L9G999G999G990D00',
+               'nls_numeric_characters=''. ''') as C
+  from dual
+;
+  
+select to_number('789.05', '99999999D99999999',
+                 'nls_numeric_characters=''. ''')
+  from dual
+;
+
+select to_timestamp('27.10.2015 20:05:05',
+                    'DD.MM.YYYY HH24:MI:SS')
+  from dual
+;
+
+select sysdate as A,
+       trunc(sysdate, 'DD') as B,
+       round(sysdate, 'DD') as C,
+       trunc(189.787, 2) as D,
+       round(189.787, 2) as E,
+       trunc(189.787, -2) as D2,
+       round(189.787, -2) as E2
+  from dual
+;
+
+select systimestamp+1-1/24 as A
+  from dual
+;
+select sysdate-(o.order_date+0) as a,
+       sysdate-cast(o.order_date as date) as b
+  from orders o
+;
+select to_number(to_char(sysdate, 'DD')) as A,
+       extract(day from sysdate) as B,
+       --extract(hour from sysdate) as C -- не работает
+       extract(hour from cast(systimestamp as TIMESTAMP)) as C
+  from dual
+;
+select last_day(sysdate) as a,
+       add_months(sysdate, 1) as b
+  from dual
+;
+select add_months(trunc(sysdate, 'MM'), -1) as sdate,
+       trunc(sysdate, 'MM') as edate
+  from dual
+;
+
+select ceil(2) as A1,
+       ceil(2.1) as A2,
+       floor(-3) as B1,
+       floor(-3.9) as B2,
+       trunc(-3) as B1,
+       trunc(-3.9) as B2
+  from dual
+;
+select greatest(8, 89, 5) as A,
+       least(5, 3, 2) as B
+  from dual
+;
+--cos/sin/tan/cosh/sinh/tanh/asin/acos/atan/atan2
+select power(7, 3),
+       exp(2),
+       ln(exp(1)),
+       log(10, 100)
+  from dual
+;
+
+-- asci, chr, nchr, unistr
+select  ascii('A'),
+        chr(65),select length('abcdef') as A,
+        chr(ascii('A')+25),       instr('abcdef', 'cd') as B,
+        ascii('a'),       substr('abcdef', 2, 3) as C1,
+        ascii('Ё'),       substr('abcdef', 2) as C2,
+        ascii(N'Ё'),       substr('abcdef', -3, 1) as C3,
+        unistr('\0401'), -- UCS-2       replace('abcdef abcdef', 'cd', '123') as D,
+        nchr(53377)               trim('  jhkwjdnekwje wedfkjn ') as E1,
+  from  dual;       rtrim('  jhkwjdnekwje wedfkjn ') as E2,
+       ltrim('  jhkwjdnekwje wedfkjn ') as E3,
+       lpad('abc', 10, '-+') as F1,
+       rpad('abc', 10, '-+') as F2,
+       ascii('a') as G1,
+       chr(ascii('a')+25) as G2,
+       'a'||chr(13)||chr(10)||'b'
+  from dual
+;
+
+select case
+         when <условие1> then
+           <значение1>
+         when <условие2> then
+           <значение2>
+         ...
+         else
+           <значение_else>
+       end,
+       case <выражение>
+         when <значение1> then
+           <значение1_1>
+         when <значение2> then
+           <значение2_2>
+         ...
+         else
+           <значение_else>
+       end
+  from dual
+;
+
+select  e.employee_id,
+        e.last_name||' '||e.first_name as emp_name,
+        e.salary,
+        case
+          when e.salary >= 10000 then
+            'высокая'
+          when e.salary >= 5000 then
+            'средняя'
+          else
+            'низкая'
+        end as salary_comment,
+        case mod(employee_id, 3)
+          when 0 then 'zerro'
+          when 1 then 'one'
+          else 'two'
+        end as A,
+        decode(
+          mod(employee_id, 3),
+          0, 'zerro',
+          1, 'one',
+             'two'
+        ) as B,
+        decode(null, null, 1) as C,
+        nvl(1, 2) as D1,
+        nvl(null, 3) as D1,
+        coalesce(null, null, null, 4, 78, null) as E,
+        nvl2(1, 2, 3) as F1,
+        nvl2(null, 22, 33) as F2,
+        nullif(45, 45) as E1,
+        nullif(45, 46) as E2
+  from  employees e
+;
+
+select user--, sqlerrm, sqlcode
+  from dual
+;

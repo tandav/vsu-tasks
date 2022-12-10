@@ -1,0 +1,166 @@
+number(N[, M])
+number(4, 2)
+number(3)       -999 до 999
+67.78
+
+
+int = number(38)
+float = number
+
+binary_float   // 4 байта
+binary_double  // 8 байта
+
+
+char(N)      max(N) = 2000
+char(10)
+varchar(N) = varchar2(N)
+varchar2(N)  max(N) = 4000
+nchar(N)     max(N) = 1000
+nvarchar2(N) max(N) = 2000
+'test'
+
+
+date
+date'2014-10-22'
+timestamp
+timestamp with time zone
+interval
+
+
+blob
+clob
+nclob
+
+
+
+'10.0'/'2' = 5
+
+nls - параметры
+
+
+
+-- where order_date >= '01.01.2000'
+where order_date >= date'2000-01-01'
+
+
+a'b
+
+'a''b'
+
+
+-- плохо
+where extract(year from order_date)=2000
+-- плохо
+where to_char(order_date, 'YYYY')=2000
+-- некрасиво
+where order_date between date'2000-01-01' and
+                         date'2001-01-01'-1/24/3600
+-- нормально
+where date'2000-01-01'<=order_date and
+      order_date<date'2001-01-01'
+
+
+where lower(product_name) like '%mouse%'
+
+where first_name like '__a%'
+
+where product_name like '%\%%' escape '\'
+
+where regexp_like(product_name, '(.\d.){5}')
+
+
+
+a - a
+[a-d]
+[amf]
+^
+$
+.
+\d
+\w
+\W
+\s
+\S
+a{10}
+(ab){1,3}  ab abab ababab
+
+
+
+-- направильно (не будет работать)
+where name=''
+-- правильно
+where name is null
+
+
+  A and B
+  A or B
+  not A
+
+
+
+
+select *
+  from T
+  where A
+
+select *
+  from T
+  where not A
+
+where A in (B, C, D)
+where A not in (B, C, D)
+where A not in (1, null, 5)
+
+
+
+order by A (asc|desc) nulls (last|first)
+order by A desc nulls last
+
+
+abs(A)
+round(A, N)  round(1234, -2)=1200
+ceil(A)      ceil(10.1)=11  ceil(10)=10
+floor(A)     floor(10.9)=10 floor(11)=11
+pow(2, 3) = 8
+mod(17, 5) = 2
+trunc(17.7) = 17
+trunc(-17.7) = -17
+floor(-17.7) = -18
+
+length(S)
+substr(S, F, C)  substr('abcdef', 3, 2)='cd'
+                 substr('abcdef', 3)='cdef'
+                 substr('abcdef', -2, 1)='e'
+                 substr('abcdef', -2)='ef'
+instr(S, S2)     instr('abcdef', 'cd')=3
+lower(S)
+upper(S)
+capilize(S)      capilize('AB ddf ss')='Ab Ddf Ss'
+ltrim(S)         ltrim(' a ')='a '
+rtrim(S)         rtrim(' a ')=' a'
+trim(S)          trim(' a ')='a'
+lpad(S, N, S2)   lpad('ab', 5, '0')='000ab'
+                 lpad('ab', 5, ' ')='   ab'
+rpad             rpad('ab', 5, '0')='ab000'
+
+
+DATE+1     date'2014-10-22 20:10:11'+1
+           date'2014-10-23 20:10:11'
+DATE-1/24/3600
+sysdate
+systimestamp
+extract(month from sysdate)  -- 10
+extract(year from sysdate)   -- 2014
+extract(date from sysdate)   -- 22
+extract(minute from systimestamp)
+to_char(sysdate, 'DD.MM.YYYY HH24:MI:SS')
+HH
+to_char(sysdate, 'Month', 'nls_date_language=russian')
+to_date('01.01.2000', 'DD.MM.YYYY')
+round(sysdate)=date'2014-10-23'
+trunc(sysdate)=date'2014-10-22'
+
+trunc(sysdate, 'HH')
+trunc(trunc(sysdate, 'MM')+31, 'MM')=date'2014-11-01'
+add_monthes(trunc(sysdate, 'MM'), 1)
+to_number(, '9999.99')

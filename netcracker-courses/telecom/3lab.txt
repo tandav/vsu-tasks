@@ -1,0 +1,12 @@
+en
+conf t
+ip dhcp pool TEST2
+network 11.0.0.0 255.0.0.0
+default-router 11.0.0.254
+dns-server 10.0.0.1
+ip dhcp excl 11.0.0.1 11.0.0.49
+ip dhcp excl 11.0.0.254
+
+название сетей ipv6 address
+2001:DB8:1::/64
+2001:DB8:2::/64

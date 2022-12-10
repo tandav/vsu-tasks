@@ -1,0 +1,22 @@
+-- REPORTS -------------------------------------------------
+DROP table REPORTS;
+CREATE TABLE REPORTS (
+  id   NUMBER        NOT NULL PRIMARY KEY,
+  name VARCHAR2 (20) NOT NULL
+);
+
+DROP SEQUENCE REPORTS_seq;
+CREATE SEQUENCE REPORTS_seq START WITH 1;
+
+CREATE OR REPLACE TRIGGER REPORTS_id_autoincrement
+  BEFORE INSERT ON REPORTS
+  FOR EACH ROW
+  BEGIN
+    SELECT REPORTS_seq.NEXTVAL
+    INTO   :new.id
+    FROM   dual;
+  END;
+
+INSERT INTO REPORTS (name) VALUES ('Зачет');
+INSERT INTO REPORTS (name) VALUES ('Экзамен');
+COMMIT;

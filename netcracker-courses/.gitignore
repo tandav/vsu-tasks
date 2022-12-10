@@ -1,0 +1,8 @@
+.idea
+*.class
+*.pdf
+*.ppt
+Thumbs.db
+*.doc
+*.odt
+*.iml

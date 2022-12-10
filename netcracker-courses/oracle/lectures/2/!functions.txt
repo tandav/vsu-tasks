@@ -1,0 +1,304 @@
+Список функций Oracle:
+http://www.techonthenet.com/oracle/functions/index.php
+
+  coalesce - возвращает первый not null из своих аргументов
+  ceil - округление числа вверх (только до целых)
+  extract({ YEAR | MONTH | DAY | HOUR | MINUTE | SECOND } from date <date>) - извлекает номер года, месяца и т.д. из числа
+  mod(m, n) - делление по модулю, точнее m - n * floor(m/n)
+  floor - округление числа вниз (только до целых)
+  greatest - возвращает максимальный из своих аргументов (если есть null-аргумент, то null)
+  least - возвращает минимальный из своих аргументов (если есть null-аргумент, то null)
+
+  
+Описание синтаксиса операторов SQL и PL/SQL:
+http://psoug.org/reference/update.html
+
+
+Аналитические функции в Oracle:
+http://www.interface.ru/home.asp?artId=1774
+http://my-oracle.it-blogs.com.ua/post-72.aspx
+
+Описание некоторых функций на русском:
+  http://www.quizful.net/post/oracle-inline-functions
+  http://www.sernam.ru/book_orc.php (раздел 5)
+
+
+
+select *
+  from nls_session_parameters;
+select *
+  from v$parameter;
+
+Конвертация:
+  to_date/to_char
+  to_number/to_char
+
+    select to_char(-123, '999990D00') as A,
+           to_char(1000123.456, '999990D00', 'nls_numeric_characters=''. ''') as B,
+           trim(to_char(1000123.456, '9999999990D00', 'nls_numeric_characters=''. ''')) as C,
+           to_char(1000123.456, 'L9G999G999G990D00', 'nls_numeric_characters=''. ''') as C
+      from dual;    
+
+  to_timestamp/to_timestamp_tz
+  TO_YMINTERVAL('03-11')
+  extract
+  cast
+
+
+Математические:
+  mod
+  greatest
+  least
+  pow
+  sqrt
+  sign
+  trunc/round
+  ceil/floor
+  exp
+  ln/log
+  cos/sin/tan/cosh/sinh/tanh/asin/acos/atan/atan2
+
+Даты:
+  sysdate/systimestamp  
+  last_day
+  NEXT_DAY(date, weekday)
+  trunc/round
+
+Строковые:
+  ascii/chr
+  nchar
+  CONVERT('A B C D E A E I O O', 'US7ASCII', 'WE8ISO8859P1')
+  lower/upper/initcap
+  length
+  instr/substr
+  trim/ltrim/rtrim
+  lpad/rpad
+  regexp_count/regexp_instr/regexp_replace/regexp_substr
+
+Логические:
+  nvl, coalesce, nvl2, decode
+  LNNVL(qty >= reorder_level) - null - истина
+  nullif
+
+Разное:
+  user
+  userenv
+  sqlcode/sqlerrm
+
+
+
+
+For easy reference, we have provided a list of all Oracle/PLSQL functions. The list of Oracle/PLSQL functions is sorted into the type of function based on categories such as string/character, conversion, advanced, numeric/mathematical, and date/time.
+
+These functions can be used in SQL statements or queries in Oracle. Or, they can be used within the programming environment provided by the Oracle/PLSQL database, such as stored procedures, functions, triggers, etc.
+
+Below is the list of Oracle/PLSQL functions, sorted by category (ie: type of function).
+String / Character Functions
+ASCII
+ASCIISTR
+CHR
+COMPOSE
+CONCAT
+Concat with ||
+CONVERT
+DECOMPOSE
+DUMP
+INITCAP
+INSTR
+INSTR2
+INSTR4
+INSTRB
+INSTRC
+LENGTH
+LENGTH2
+LENGTH4
+LENGTHB
+LENGTHC
+LOWER
+LPAD
+LTRIM
+NCHR
+REPLACE
+RPAD
+RTRIM
+SOUNDEX
+SUBSTR
+TO_CHAR
+TO_DATE
+TRANSLATE
+TRIM
+UPPER
+VSIZE
+Conversion Functions
+BIN_TO_NUM
+CAST
+CHARTOROWID
+FROM_TZ
+HEXTORAW
+NUMTODSINTERVAL
+NUMTOYMINTERVAL
+RAWTOHEX
+TO_CHAR
+TO_CLOB
+TO_DATE
+TO_DSINTERVAL
+TO_LOB
+TO_MULTI_BYTE
+TO_NCLOB
+TO_NUMBER
+TO_SINGLE_BYTE
+TO_TIMESTAMP
+TO_TIMESTAMP_TZ
+TO_YMINTERVAL
+Advanced Functions
+BFILENAME
+CARDINALITY
+CASE
+COALESCE
+DECODE
+EMPTY_BLOB
+EMPTY_CLOB
+GROUP_ID
+LAG
+LEAD
+LISTAGG
+LNNVL
+NANVL
+NULLIF
+NVL
+NVL2
+SYS_CONTEXT
+UID
+USER
+USERENV
+Numeric / Mathematical Functions
+ABS
+ACOS
+ASIN
+ATAN
+ATAN2
+AVG
+BIN_TO_NUM
+BITAND
+CEIL
+CORR
+COS
+COSH
+COUNT
+COVAR_POP
+COVAR_SAMP
+CUME_DIST
+DENSE_RANK
+EXP
+EXTRACT
+FLOOR
+GREATEST
+LEAST
+LN
+LOG
+MAX
+MEDIAN
+MIN
+MOD
+POWER
+RANK
+REMAINDER
+ROUND (numbers)
+SIGN
+SIN
+SINH
+SQRT
+STDDEV
+SUM
+TAN
+TANH
+TO_NUMBER
+TRUNC (numbers)
+VARIANCE
+VAR_POP
+VAR_SAMP
+Date / Time Functions
+ADD_MONTHS
+CURRENT_DATE
+CURRENT_TIMESTAMP
+DBTIMEZONE
+FROM_TZ
+LAST_DAY
+LOCALTIMESTAMP
+MONTHS_BETWEEN
+NEW_TIME
+NEXT_DAY
+ROUND (dates)
+SESSIONTIMEZONE
+SYSDATE
+SYSTIMESTAMP
+TO_CHAR
+TO_DATE
+TO_TIMESTAMP
+TO_TIMESTAMP_TZ
+TO_YMINTERVAL
+TRUNC (dates)
+TZ_OFFSET
+Miscellaneous Functions
+SQLCODE
+SQLERRM
+Retrieve user ID from the current Oracle session
+Retrieve the session ID for the user logged in
+
+
+
+
+
+
+YEAR	Year, spelled out
+YYYY	4-digit year
+YYY
+ YY
+ Y	Last 3, 2, or 1 digit(s) of year.
+IYY
+ IY
+ I	Last 3, 2, or 1 digit(s) of ISO year.
+IYYY	4-digit year based on the ISO standard
+Q	Quarter of year (1, 2, 3, 4; JAN-MAR = 1).
+MM	Month (01-12; JAN = 01).
+MON	Abbreviated name of month.
+MONTH	Name of month, padded with blanks to length of 9 characters.
+RM	Roman numeral month (I-XII; JAN = I).
+WW	Week of year (1-53) where week 1 starts on the first day of the year and continues to the seventh day of the year.
+W	Week of month (1-5) where week 1 starts on the first day of the month and ends on the seventh.
+IW	Week of year (1-52 or 1-53) based on the ISO standard.
+D	Day of week (1-7).
+DAY	Name of day.
+DD	Day of month (1-31).
+DDD	Day of year (1-366).
+DY	Abbreviated name of day.
+J	Julian day; the number of days since January 1, 4712 BC.
+HH	Hour of day (1-12).
+HH12	Hour of day (1-12).
+HH24	Hour of day (0-23).
+MI	Minute (0-59).
+SS	Second (0-59).
+SSSSS	Seconds past midnight (0-86399).
+FF	Fractional seconds.
+
+
+
+select to_char(sysdate, 'Month', 'NLS_DATE_LANGUAGE=UKRAINIAN')
+  from dual
+
+
+
+TO_CHAR(1210.73, '9999.9')
+Result: ' 1210.7'
+
+TO_CHAR(-1210.73, '9999.9')
+Result: '-1210.7'
+
+TO_CHAR(1210.73, '9,999.99')
+Result: ' 1,210.73'
+
+TO_CHAR(1210.73, '$9,999.00')
+Result: ' $1,210.73'
+
+TO_CHAR(21, '000099')
+Result: ' 000021'

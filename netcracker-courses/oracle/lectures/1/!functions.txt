@@ -1,0 +1,138 @@
+Список функций Oracle:
+http://www.techonthenet.com/oracle/functions/index.php
+
+  nvl(a, b)
+  nvl(a, b, c)
+  decode(a,
+         b1, c1,
+         b2, c2,
+         b3, c3,
+         d)
+  coalesce - возвращает первый not null из своих аргументов
+  ceil - округление числа вверх (только до целых)
+  extract({ YEAR | MONTH | DAY | HOUR | MINUTE | SECOND } from date <date>) - извлекает номер года, месяца и т.д. из числа
+  mod(m, n) - делление по модулю, точнее m - n * floor(m/n)
+  floor - округление числа вниз (только до целых)
+  greatest - возвращает максимальный из своих аргументов (если есть null-аргумент, то null)
+  least - возвращает минимальный из своих аргументов (если есть null-аргумент, то null)
+
+  
+Описание синтаксиса операторов SQL и PL/SQL:
+http://psoug.org/reference/update.html
+
+
+Аналитические функции в Oracle:
+http://www.interface.ru/home.asp?artId=1774
+http://my-oracle.it-blogs.com.ua/post-72.aspx
+
+Описание некоторых функций на русском:
+  http://www.quizful.net/post/oracle-inline-functions
+  http://www.sernam.ru/book_orc.php (раздел 5)
+
+
+
+
+Конвертация данных:
+  to_number
+  to_date
+
+YEAR Year, spelled out 
+YYYY 4-digit year 
+YYY
+YY
+Y Last 3, 2, or 1 digit(s) of year. 
+IYY
+IY
+I Last 3, 2, or 1 digit(s) of ISO year. 
+IYYY 4-digit year based on the ISO standard 
+RRRR Accepts a 2-digit year and returns a 4-digit year.
+A value between 0-49 will return a 20xx year.
+A value between 50-99 will return a 19xx year. 
+Q Quarter of year (1, 2, 3, 4; JAN-MAR = 1). 
+MM Month (01-12; JAN = 01). 
+MON Abbreviated name of month. 
+MONTH Name of month, padded with blanks to length of 9 characters. 
+RM Roman numeral month (I-XII; JAN = I). 
+WW Week of year (1-53) where week 1 starts on the first day of the year and continues to the seventh day of the year. 
+W Week of month (1-5) where week 1 starts on the first day of the month and ends on the seventh. 
+IW Week of year (1-52 or 1-53) based on the ISO standard. 
+D Day of week (1-7). 
+DAY Name of day. 
+DD Day of month (1-31). 
+DDD Day of year (1-366). 
+DY Abbreviated name of day. 
+J Julian day; the number of days since January 1, 4712 BC. 
+HH Hour of day (1-12). 
+HH12 Hour of day (1-12). 
+HH24 Hour of day (0-23). 
+MI Minute (0-59). 
+SS Second (0-59). 
+SSSSS Seconds past midnight (0-86399). 
+FF Fractional seconds. Use a value from 1 to 9 after FF to indicate the number of digits in the fractional seconds. For example, 'FF4'. 
+AM, A.M., PM, or P.M. Meridian indicator 
+AD or A.D AD indicator 
+BC or B.C. BC indicator 
+TZD Daylight savings information. For example, 'PST' 
+TZH Time zone hour. 
+TZM Time zone minute. 
+TZR Time zone region. 
+
+  to_char
+  cast
+  from_tz
+    select FROM_TZ(TIMESTAMP '2005-09-11 01:50:42', '5:00')
+      from dual;
+  to_yminterval
+    TO_YMINTERVAL('03-11') would return 3 years 11 months as an INTERVAL YEAR TO MONTH type 
+    TO_YMINTERVAL('01-05') would return 1 year 5 months as an INTERVAL YEAR TO MONTH type 
+    TO_YMINTERVAL('00-01') would return 0 years 1 month as an INTERVAL YEAR TO MONTH type 
+  numtodsinterval
+    NUMTODSINTERVAL(150, 'DAY') would return '+000000150' 
+    NUMTODSINTERVAL(1500, 'HOUR') would return '+000000062' 
+    NUMTODSINTERVAL(15000, 'MINUTE') would return '+000000010' 
+    NUMTODSINTERVAL(150000, 'SECOND') would return '+000000001' 
+  numtodsinterval
+    NUMTOYMINTERVAL(100000000, 'MONTH') would return '+0083' 
+    NUMTOYMINTERVAL(100000, 'YEAR') would return '+0001' 
+  to_dsinterval
+    TO_DSINTERVAL('150 08:30:00') would return '+000000150' 
+    TO_DSINTERVAL('80 12:30:00') would return '+000000080' 
+    TO_DSINTERVAL('95 18:30:00') would return '+000000095' 
+  to_timestamp
+    TO_TIMESTAMP_TZ('2003/12/13 10:13:18 -8:00', 'YYYY/MM/DD HH:MI:SS TZH:TZM')
+    TO_TIMESTAMP_TZ('2003/DEC/13 10:13:18 -8:00', 'YYYY/MON/DD HH:MI:SS TZH:TZM')
+  to_yminterval
+    TO_YMINTERVAL('03-11') would return 3 years 11 months as an INTERVAL YEAR TO MONTH type 
+    TO_YMINTERVAL('01-05') would return 1 year 5 months as an INTERVAL YEAR TO MONTH type 
+    TO_YMINTERVAL('00-01') would return 0 years 1 month as an INTERVAL YEAR TO MONTH type 
+  to_lob
+  to_clob
+  to_nclob
+  
+Выбор
+  nvl
+  nvl2
+  coalesce
+  case
+  decode
+  nullif
+  lnnvl
+  nanvl
+
+Даты:
+  sysdate
+  systimestamp
+  current_date
+  current_timestamp
+  
+
+Округления:
+  ceil
+  floor
+  round
+  trunc
+  next_day
+    NEXT_DAY('01-Aug-03', 'TUESDAY')	would return '05-Aug-03'
+    NEXT_DAY('06-Aug-03', 'WEDNESDAY')	would return '13-Aug-03'
+    NEXT_DAY('06-Aug-03', 'SUNDAY')	would return '10-Aug-03'
+  last_day

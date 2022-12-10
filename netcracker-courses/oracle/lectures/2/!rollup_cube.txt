@@ -1,0 +1,9 @@
+select deptno, job, count(*), grouping(deptno), grouping(job)
+from emp
+group by rollup(deptno, job); 
+
+select deptno, job, count(*), grouping(deptno), grouping(job)
+from emp
+group by cube(deptno, job); 
+
+grouping/grouping_id
